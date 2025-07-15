@@ -27,25 +27,4 @@ It includes:
 
 ---
 
-## 🧠 LSTM Model Summary
-
-```python
-model = Sequential()
-
-model.add(Bidirectional(LSTM(units=100, return_sequences=True), input_shape=(X.shape[1], 1)))
-model.add(Dropout(0.3))
-
-model.add(LSTM(units=120, return_sequences=True))
-model.add(Dropout(0.3))
-
-model.add(LSTM(units=100, return_sequences=True))
-model.add(Dropout(0.3))
-
-model.add(LSTM(units=80, return_sequences=False))
-model.add(Dropout(0.3))
-
-model.add(Dense(units=64, activation='relu'))
-model.add(Dropout(0.2))
-
-model.add(Dense(units=1))
 
